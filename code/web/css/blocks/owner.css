@@ -1,0 +1,95 @@
+#modalForm {
+    position: fixed;
+    top: 150px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 150;
+    display: none;
+    margin: 0 auto;
+    width: 300px;
+    height: 150px;
+    background-color: darkorange;
+}
+
+.ent {
+    display: grid;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.buts {
+    padding: 0 10px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+}
+
+#filter {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+
+.add {
+    margin-top: 15px;
+    padding-left: 150px;
+}
+
+.but {
+    cursor: pointer;
+    padding: 8px 10px;
+    height: 30px;
+    color: aliceblue;
+    background: blueviolet;
+    border-radius: 3px/3px;
+    text-transform: uppercase;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+
+}
+
+.but:hover {
+    opacity: .80;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.but:active {
+    color: navajowhite;
+    opacity: .80;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+#task-form {
+    margin-left: 200px;
+}
+
+.win-select {
+    font-size: 14px;
+    width: 220px;
+    height: 25px;
+    background: white;
+    border-radius: 3px/3px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+}
+
+.valid input {
+    border: 1px solid blue;
+}
+
+.error input {
+    border: 1px solid red;
+}
+
+.error {
+    color: red;
+    font-size: 11px;
+}

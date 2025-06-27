@@ -1,0 +1,18 @@
+.content {
+    background: url("../../images/content-grass.jpg") center top repeat-y #a5cb4b;
+    min-height: 700px;
+}
+
+.content__wrap {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.content__title, .content__text {
+    text-align: center;
+    color: #fff;
+}
+
+.content__text {
+    font-size: 20px;
+}

@@ -1,0 +1,65 @@
+.header {
+    background: url("../../images/header-forest.jpg") center top no-repeat #000;
+    background-size: cover;
+}
+
+.header__top {
+    display: grid;
+    grid-template-columns: 67px 150px 1fr;
+    grid-column-gap: 20px;
+    padding-top: 50px;
+    margin-left: 30px;
+    align-items: center;
+}
+
+.logo__img:hover {
+    transform: scale(1.03);
+}
+
+.header__info {
+    margin-top: 15px;
+    padding-bottom: 30px;
+}
+
+#role__button {
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.header__title {
+    color: #fff;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 36px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.header__text {
+    text-align: center;
+}
+
+.header__link {
+    font-size: 30px;
+    line-height: 75px;
+    color: yellowgreen;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 12px;
+    transition-duration: 500ms;
+    transition-property: letter-spacing;
+}
+
+.header__link:hover {
+    letter-spacing: 15px;
+}
+
+@media (max-width: 1140px) {
+    .header__title {
+        font-size: 40px;
+    }
+    .header__link {
+        font-size: 20px;
+    }
+}

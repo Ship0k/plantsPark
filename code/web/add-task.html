@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Task</title>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script src="/script/add-task.js"></script>
+    <script src="/script/role.js"></script>
+</head>
+<body onload="startSelect('/owner/selectPlant'); getRole()">
+<div class="container">
+    <header class="header">
+        <div class="header__wrap wrap">
+            <div class="header__top">
+                <div class="header__logo logo">
+                    <a class="logo__link" href="/home">
+                        <img class="logo__img" src="/images/logo.png" alt="Логотип">
+                    </a>
+                </div>
+                <div class="header__site-name">
+                    <input id="role__button" type="button" class="perform" value="Вход" onclick="login()">
+                    <img src="/images/site-name.png">
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link forester" href="/forester/report">ОТЧЕТ ЛЕСНИКА</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link owner" href="/owner/tasks">РЕДАКТОР ЗАДАНИЙ</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link owner" href="/owner/plants">РЕДАКТОР РАСТЕНИЙ</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link guest" href="/plant">КАК ГОСТЬ ВЫ МОЖЕТЕ ПРОСМАТРИВАТЬ ТОЛЬКО РАСТЕНИЯ ПАРКА</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__info">
+                <h1 id="role" class="header__title">PLANTS PARK</h1>
+                <p class="header__text">
+                    <a class="header__link" href="/plant">РАСТЕНИЯ</a>
+                </p>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <div id="loading"></div>
+        <div class="content__wrap wrap">
+            <h1 class="content__title">Выберите задание для лесника</h1>
+            <br>
+            <form id="task-form" onsubmit="addTask('/owner/addTask'); return false" method="post">
+                <div id="selects">
+                    <button class="cancel" type="button" onclick="history.back();">назад</button>
+                    <button class="perform" type="submit">Ok</button>
+                    <select id="select-task" class="win-select" name="task">
+                        <option value="1">Высадить</option>
+                        <option selected value="2">Художественно обработать</option>
+                        <option value="3">Лечить</option>
+                        <option value="4">Уничтожить</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div id="contacts">
+        Анатолий<br>
+        +375 44 585-72-79<br>
+        +375 232 29-85-75<br>
+        <a href="#footer" class="close">Закрыть окно</a>
+    </div>
+    <footer class="footer">
+        <a name="footer"></a>
+        <div class="footer__wrap wrap">
+            <nav class="footer__menu menu menu-black">
+                <ul class="menu__list">
+                    <li class="menu__item">&copy; 2019 PLANTS PARK</li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contacts">КОНТАКТЫ</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="mailto:ship0k@mail.ru?subject=Вопрос по сайту Plants Park"
+                           title="почта разработчика">ЗАДАТЬ ВОПРОС</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
